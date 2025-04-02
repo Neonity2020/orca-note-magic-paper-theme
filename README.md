@@ -12,17 +12,16 @@ Download the `custom.css` file to /orca directory, and cover the old file (recom
 
 ## Method II - Theme Plugin (recommonded)
 
+![magic-page-theme-english](magic-page-theme-english.jpg)
+
 magic-paper-theme/
 
 ├── dist/                   # Build output directory 构建输出目录
-
-│   ├── theme.css           # Theme styles file 主题样式文件
-
-│   └── index.js            # Theme entry file 主题入口文件
-
+   ├── theme.css                # Theme styles file 主题样式文件
+   └── index.js                 # Theme entry file 主题入口文件
 ├── icon.png                # Theme icon 主题图标
 
 - Download the `magic-paper-theme` folder to your local machine
-- Copy the folder to Orca Note's Plugin directory
+- Copy the folder to Orca Note's plugins directory (/orca/plugins)
 - Restart Orca Note, find the plugin in Settings and enable `magic-paper-theme`
 = Switch to `magic-paper-theme` in the theme settings
