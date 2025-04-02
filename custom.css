@@ -1,11 +1,29 @@
 :root {
     /* 主题颜色 */
-    /* --orca-color-primary-5: rgb(182, 149, 243); //紫色 */
+    /* --orca-color-primary-5: rgb(182, 149, 243); //紫色 purple */
     /* --orca-color-primary-5: rgb(200, 55, 84); //杨红 */
-    --orca-color-bg-1: var(--orca-color-yellow-1); /* 背景色 */
-    --orca-color-bg-2: var(--orca-color-yellow-2); /* 背景色 */
+    /* --orca-color-primary-5: rgb(225, 61, 61); //活力橙 */
+    --orca-color-menu-highlight: var(--orca-color-primary-4);/* 菜单高亮 menu highlight --orca-color-primary-1 */
+    --orca-color-tag: var(--orca-color-orange-5);/* 标签颜色 tag --orca-color-gray-1 */
+    --orca-color-bg-1: var(--orca-color-yellow-1); /* 背景色 background color */
+    --orca-color-bg-2: var(--orca-color-yellow-2); /* 背景色 background color */
+    
+    
+
+    /* 蓝色 blue */
+    --orca-color-blue-1: hsl(210, 100%, 91%);
+    --orca-color-blue-2: #e0e8f0;
+    --orca-color-blue-3: hsl(210, 100%, 79%);
+    --orca-color-blue-4: hsl(210, 100%, 73%);
+    --orca-color-blue-5: hsl(210, 100%, 67%);
+    --orca-color-blue-6: hsl(210, 100%, 61%);
+    --orca-color-blue-7: hsl(210, 100%, 55%);
+    --orca-color-blue-8: hsl(210, 100%, 49%);
+    --orca-color-blue-9: #143153;
+
+    /* 黄色 */
     --orca-color-yellow-1: hsl(43, 58%, 91%);
-    --orca-color-yellow-2: hsl(43, 58%, 85%);
+    --orca-color-yellow-2: #ede4d3;
     --orca-color-yellow-3: hsl(43, 58%, 79%);
     --orca-color-yellow-4: hsl(43, 58%, 73%);
     --orca-color-yellow-5: hsl(43, 58%, 67%);
@@ -13,13 +31,28 @@
     --orca-color-yellow-7: hsl(43, 58%, 55%);
     --orca-color-yellow-8: hsl(43, 60%, 24%);
     --orca-color-yellow-9: hsl(43, 58%, 10%);
+
+    /* 橘色 orange */
+    --orca-color-orange-1: rgb(255 237 213);
+    --orca-color-orange-2: #ffd299;
+    --orca-color-orange-3: rgb(253 186 116);
+    --orca-color-orange-4: rgb(251 146 60);
+    --orca-color-orange-5: #852925;   /* #852925 #FF7F50 */
+    --orca-color-orange-6: rgb(215 80 18);
+    --orca-color-orange-7: rgb(197 64 14);
+    --orca-color-orange-8: rgb(179 58 10);
+    --orca-color-orange-9: rgb(161 52 10);
     /* 字体 */
-    --orca-fontfamily-fallback: 'TsangerJinKai03-W04', 'LXGW WenKai', Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    --orca-fontfamily-fallback: 'TsangerYunHei-W03',
+'TsangerJinKai03-W04', 'LXGW WenKai', Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     /* --orca-fontfamily-fallback: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
     --orca-fontfamily-ui: American Typewriter, FZFW-ZhuZiMinchoS-R--GB1-0;
     --orca-fontfamily-editor: var(--orca-fontfamily-fallback);
 }
-/* 暗色模式 */
+
+
+
+/* 暗色模式 dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --orca-color-selection: oklch(from var(--orca-color-primary-5) l c h / 50%);
@@ -49,6 +82,8 @@
         --orca-shadow-findreplace: rgb(from var(--orca-color-gray-2) r g b / .04) 0px 0px 0px 1px, rgb(from var(--orca-color-gray-2) r g b / .03) 0px 3px 6px, rgb(from var(--orca-color-gray-2) r g b / .06) 0px 9px 24px
     }
 }
+
+/* 面板容器 pancontainer */
 .orca-panels-container {
     background-color: var(--orca-color-yellow-1);
     background-image: 
@@ -66,14 +101,16 @@
 
 }
 
+/* 侧边栏 sidebar */
 #sidebar {
-    color:var(--orca-color-yellow-9);
+    color:var(--orca-color-gray-9);
     background-color: var(--orca-color-yellow-2);
     @media (prefers-color-scheme: dark) {
         color:var(--orca-color-yellow-2);
         background-color: var(--orca-color-yellow-9);}
 }
 
+/* 按钮 button */
 .orca-button.plain {
     color:var(--orca-color-yellow-9);
     background-color: var(--orca-color-yellow-2);
@@ -82,15 +119,17 @@
         background-color: var(--orca-color-yellow-9);}
 }
 
+/* 侧边栏标签选项 sidebar tab options */
 .orca-sidebar-tab-options {
     display: flex;
-    background-color: var(--orca-color-yellow-7);
+    background-color: var(--orca-color-orange-2);
     margin-top: var(--orca-spacing-md);
     font-size: var(--orca-fontsize-xs);
     padding: var(--orca-spacing-xs);
     border-radius: var(--orca-radius-md);
     box-shadow: var(--orca-shadow-md);
 }
+/* 标签图标 tag icon */
 .orca-tags-tag-icon {
     grid-column: 2;
     width: 22px;
@@ -100,14 +139,14 @@
     line-height: 22px;
     border-radius: var(--orca-radius-md);
     font-size: var(--orca-fontsize-md);
-    background-color: var(--orca-color-yellow-7);
+    background-color: var(--orca-color-orange-2);
 }
-
+/* 侧边栏标签选项 segmented item */ 
 .orca-sidebar-tab-options .orca-segmented-item {
     color: var(--orca-color-yellow-9);
     padding: 0 var(--orca-spacing-sm);
 }
-
+/* 菜单 menu */ 
 .orca-menu {
     position: relative;
     padding: var(--orca-spacing-sm);
@@ -121,48 +160,52 @@
         box-shadow: var(--orca-shadow-menu);
     }
 }
+/* 菜单项 menu item */
 .orca-menu-item.orca-repo-switcher-repo-item.orca-key-selected {
     color: var(--orca-color-yellow-1);
     background-color: var(--orca-color-menu-highlight);
 }
+/* 菜单项 hover */
 .orca-menu-item:hover {
     color: var(--orca-color-yellow-1);
     background-color: var(--orca-color-menu-highlight);
 }
 
 .orca-tags-tag-item:hover {
-    background-color: var(--orca-color-yellow-7);
+    background-color: var(--orca-color-orange-2);
 }
-
+/* 菜单文本 menu text */
 .orca-menu-text {
     color: var(--orca-color-yellow-9);
     @media (prefers-color-scheme: dark) {
         color: var(--orca-color-yellow-2);
     }
 }
-
+/* 菜单文本 hover */
 .orca-menu-text:hover {
-    color: var(--orca-color-yellow-9);
+    color: var(--orca-color-yellow-2);
 }
-
+/* 收藏项 hover */
 .orca-fav-item-item:hover {
-    color: var(--orca-color-yellow-9);
-    background-color: var(--orca-color-yellow-7);
+    color: var(--orca-color-yellow-1);
+    background-color: var(--orca-color-orange-2);
 }
-
+/* 收藏项图标 fav item icon */
 .orca-fav-item-icon {
     color: var(--orca-color-yellow-7);
     background-color: var(--orca-color-yellow-2);
 }
+/* 收藏项 hover */
 .orca-aliased-block-item:hover {
     color: var(--orca-color-yellow-9);
-    background-color: var(--orca-color-yellow-7);
+    background-color: var(--orca-color-orange-2);
 }
+/* 收藏项图标 aliased block icon */
 .orca-aliased-block-icon {
     color: var(--orca-color-yellow-7);
     background-color: var(--orca-color-yellow-2);
 }
-
+/* 查询条件 query conditions */
 .orca-query-conditions {
     font-family: var(--orca-fontfamily-ui);
     font-size: var(--orca-fontsize-sm);
@@ -170,4 +213,53 @@
     padding: var(--orca-spacing-md);
     border-radius: var(--orca-radius-sm);
     overflow: hidden;
+}
+/* 菜单文本 hover */
+.orca-menu-text.orca-key-selected {
+    color: var(--orca-color-yellow-1);
+    background-color: var(--orca-color-menu-highlight);
+}
+/* 菜单文本 hover */
+.orca-menu .orca-context-menu-item:hover {
+    color: var(--orca-color-yellow-9);
+}
+/* 高亮 highlight */
+.highlight {
+    background-color: unset;
+}
+/* 引用内容 repr quote content */
+.orca-repr-quote-content {
+    border-left: none;
+    padding-left: var(--orca-spacing-lg);
+    font-family: var(--orca-fontfamily-ui);
+    margin: var(--orca-spacing-md) 0;
+}
+/* 引用内容 repr quote content */
+.orca-repr-quote-content::before {
+    content: '“';
+    color: var(--orca-color-primary-4); 
+    font-size: var(--orca-fontsize-3xl);
+    font-family: var(--orca-fontfamily-ui);
+    position: relative;
+    left: -10px;
+}
+/* 引用内容 repr quote content */
+.orca-repr-ul-content:before {
+    color: var(--orca-color-primary-5);
+}
+/* 标签 tag */
+.orca-tag {
+    color: var(--orca-color-orange-1);
+}
+/* 分段 segmented */
+.orca-segmented:not(.orca-transitioning) .orca-segmented-item.orca-selected {
+    background-color: var(--orca-color-blue-9);
+    box-shadow: var(--orca-shadow-segmented);
+}
+.orca-segmented-item.orca-selected {
+    color: var(--orca-color-gray-1);
+}
+/* 弹窗 popup */
+.orca-popup {
+    color: var(--orca-color-gray-4)
 }
